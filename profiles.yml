@@ -1,0 +1,23 @@
+sandbox:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: keyfile.json
+      project: solutionsdw
+      execution_project: solutionsdw
+      dataset: sandbox_0000_dev
+      location: us-central1
+      threads: 24
+      retries: 1
+    prod:
+      type: bigquery
+      method: service-account
+      keyfile: /home/airflow/gcs/dags/keyfile.json
+      project: insightsprod
+      execution_project: insightsprod
+      dataset: sandbox_0000_prod
+      location: us-central1
+      threads: 24
+      retries: 1

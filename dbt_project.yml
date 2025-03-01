@@ -1,0 +1,55 @@
+name: "sandbox"
+version: "1.0.0"
+config-version: 2
+require-dbt-version: [">=1.0.0", "<2.0.0"]
+profile: "sandbox"
+
+vars:
+  version: "1.0.0" # Version of Pulse
+  currency: "USD" # Currency to be used
+  to_timezone: "America/Los_Angeles" # Timezone to convert the data to
+  cogsMargin: 15 # COGS Margin to be used in the COGS calculation
+
+  # Platform flags
+  SQP: false
+  AMAZONSBADS: false
+  AMAZONSDADS: false
+  AMAZONSELLER: false
+  AMAZONSPADS: false
+  AMAZONVENDOR: false
+  AMAZONDSPADS: false
+  AMC: false
+  AMS: false
+  BINGADS: false
+  FACEBOOK: false
+  GA4: false
+  GOOGLEADS: false
+  GSS: false
+  KLAVIYO3: false
+  PINTERESTADS: false
+  RECHARGE: false
+  SHOPIFYV2: false
+  TEST: false
+  UPSCRIBE: false
+  LOOPSUBSCRIPTIONS: false
+
+# These configurations specify where dbt should look for different types of files.
+# The `model-paths` config, for example, states that models in this project can be
+# found in the "models/" directory. You probably won't need to change these!
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+docs-paths: ["docs"]
+
+target-path: "target" # directory which will store compiled SQL files
+clean-targets: # directories to be removed by `dbt clean`
+  - "target"
+  - "dbt_packages"
+
+# Configuring models
+# Full documentation: https://docs.getdbt.com/docs/configuring-models
+models:
+  sandbox:
