@@ -14,7 +14,7 @@ vars:
   SQP: false
   AMAZONSBADS: false
   AMAZONSDADS: false
-  AMAZONSELLER: false
+  AMAZONSELLER: true
   AMAZONSPADS: false
   AMAZONVENDOR: false
   AMAZONDSPADS: false
@@ -28,7 +28,7 @@ vars:
   KLAVIYO3: false
   PINTERESTADS: false
   RECHARGE: false
-  SHOPIFYV2: false
+  SHOPIFYV2: true
   TEST: false
   UPSCRIBE: false
   LOOPSUBSCRIPTIONS: false
